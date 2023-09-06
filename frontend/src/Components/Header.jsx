@@ -1,13 +1,17 @@
 import React from 'react'
 import {Navbar, Nav, Container} from 'react-bootstrap';
-import {FaShoppingCart, FaUser} from 'react-icons/fa';
+import {FaShoppingCart, FaUser,FaUserAstronaut} from 'react-icons/fa';
+import logo from '../assets/logo.png';
 
 const Header = () => {
   return (
     <header>
-        <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+        <Navbar bg="dark" variant="dark" expand="md" collapseOnSelect>
             <Container>
-                <Navbar.Brand href="/">ProShop</Navbar.Brand>
+                <Navbar.Brand href="/">
+                <img src={logo} alt='ProShop' />
+                ProShop
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
@@ -15,8 +19,7 @@ const Header = () => {
                         <Nav.Link href="/signin"><FaUser/>Sign In</Nav.Link>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="/login">Login</Nav.Link>
-                        <Nav.Link href="/register">Register</Nav.Link>
+                        <Nav.Link href="/register"><FaUserAstronaut/>Register</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
