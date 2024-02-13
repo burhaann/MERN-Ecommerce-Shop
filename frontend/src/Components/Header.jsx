@@ -75,12 +75,16 @@ const Header = () => {
               )}
             </Nav>
             <Nav>
-              <LinkContainer to="/register">
-                <Nav.Link href="/register">
-                  <FaUserAstronaut />
-                  Register
-                </Nav.Link>
-              </LinkContainer>
+              {userInfo ? (
+                <></>
+              ) : (
+                <LinkContainer to="/register">
+                  <Nav.Link href="/register">
+                    <FaUserAstronaut />
+                    Register
+                  </Nav.Link>
+                </LinkContainer>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
