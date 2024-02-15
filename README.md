@@ -80,7 +80,3 @@ npm run data:import
 # Destroy data
 npm run data:destroy
 ```
-
-```
-
-```
