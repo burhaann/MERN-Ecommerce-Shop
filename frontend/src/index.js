@@ -14,7 +14,7 @@ import "./assets/styles/bootstrap.custom.css";
 import "./assets/styles/index.css";
 import App from "./App";
 import HomeScreen from "./screens/HomeScreen";
-import PrivateRoute from "./components/PrivateRoute";
+import PrivateRoute from "./components/PrivateRoute.jsx";
 import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
 import LoginScreen from "./screens/LoginScreen";
