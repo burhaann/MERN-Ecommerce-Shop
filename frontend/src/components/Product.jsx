@@ -2,6 +2,7 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Rating from "./Rating";
+import Message from "./Message";
 
 const Product = ({ product }) => {
   return (
@@ -17,12 +18,16 @@ const Product = ({ product }) => {
         </Link>
 
         <Card.Text as="div">
-          <Rating
-            value={product.rating}
-            text={`${product.numReviews} ${
-              product.numReviews == 1 ? "review" : "reviews"
-            }`}
-          />
+          {product.reviews.length === 0 ? (
+            <Message>No Reviews</Message>
+          ) : (
+            <Rating
+              value={product.rating}
+              text={`${product.numReviews} ${
+                product.numReviews == 1 ? "review" : "reviews"
+              }`}
+            />
+          )}
         </Card.Text>
 
         <Card.Text as="h3">${product.price}</Card.Text>
