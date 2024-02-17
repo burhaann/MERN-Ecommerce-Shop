@@ -91,12 +91,12 @@ const ProductScreen = () => {
                 </ListGroupItem>
                 <ListGroupItem>
                   {product.reviews.length === 0 ? (
-                    <Message>No Reviews</Message>
+                    <Message variant="warning">No Reviews</Message>
                   ) : (
                     <Rating
                       value={product.rating}
                       text={`${product.numReviews} ${
-                        product.numReviews == 1 ? "review" : "reviews"
+                        product.numReviews === 1 ? "review" : "reviews"
                       }`}
                     />
                   )}

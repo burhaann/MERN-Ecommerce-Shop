@@ -19,12 +19,12 @@ const Product = ({ product }) => {
 
         <Card.Text as="div">
           {product.reviews.length === 0 ? (
-            <Message>No Reviews</Message>
+            <Message variant="secondary">No Reviews</Message>
           ) : (
             <Rating
               value={product.rating}
               text={`${product.numReviews} ${
-                product.numReviews == 1 ? "review" : "reviews"
+                product.numReviews === 1 ? "review" : "reviews"
               }`}
             />
           )}
